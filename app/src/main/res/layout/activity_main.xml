@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Enter"
         android:textSize="35sp"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/edit"
         android:layout_marginTop="200sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -28,6 +28,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:textSize="35sp" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:id="@+id/edit"
+        android:hint="Enter the name"
+        android:textSize="35sp"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
