@@ -19,26 +19,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Scanner in=new Scanner(System.in);
-        System.out.println("enter the name");
-        String name=in.next();
 
         Button bt=findViewById(R.id.button);
-        bt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                TextView tv=findViewById(R.id.textView);
-                tv.setText(name);
-                if(name.charAt(0)==name.toUpperCase().charAt(0))
-                {
-                    ImageView iv=findViewById(R.id.image);
-                    iv.setImageResource(R.drawable.sea);
-                }
-                else if(name.charAt(0)==name.toLowerCase().charAt(0))
-                {
-                    ImageView iv=findViewById(R.id.image);
-                    iv.setImageResource(R.drawable.sky);
-                }
+        bt.setOnClickListener(view -> {
+            EditText et=findViewById(R.id.edit);
+            String name=et.getText().toString();
+            TextView tv=findViewById(R.id.textView);
+            tv.setText(name);
+            if(name.charAt(0)==name.toUpperCase().charAt(0))
+            {
+                ImageView iv=findViewById(R.id.image);
+                iv.setImageResource(R.drawable.sea);
+            }
+            else if(name.charAt(0)==name.toLowerCase().charAt(0))
+            {
+                ImageView iv=findViewById(R.id.image);
+                iv.setImageResource(R.drawable.sky);
             }
         });
     }
